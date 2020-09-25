@@ -11,4 +11,5 @@ export default function resize(canvas) {
         canvas.width = displayWidth;
         canvas.height = displayHeight;
     }
+
 }

@@ -1,5 +1,4 @@
 "use_strict";
-
 import resizeCanvas from './canvas-helper';
 
 let vertexShaderSource = `#version 300 es
@@ -110,3 +109,20 @@ gl.vertexAttribPointer(
 );
 
 resizeCanvas(gl.canvas);
+gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+
+// clear canvas
+gl.clearColor(0, 0, 0, 0);
+gl.clear(gl.COLOR_BUFFER_BIT);
+
+// tell it to use our program
+gl.useProgram(program);
+
+// bind the attribute/buffer set we want
+gl.bindVertexArray(vao);
+
+// ASK WEBGL TO EXECUTE OUR GLSL PROGRAM
+let primitiveType = gl.TRIANGLES;
+offset = 0;
+let count = 3;
+gl.drawArrays(primitiveType, offset, count);

@@ -1,0 +1,22 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/drewProgram/basic-webGL.git",
+  "author": "Andrew Filgueiras <andrew.lascasas@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "./init.bat"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "babel-loader": "^8.1.0"
+  }
+}
